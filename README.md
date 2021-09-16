@@ -12,4 +12,4 @@ The community sizes for the exciters are defined in the popexp.dat file. The siz
 
 ran2.cpp is the random number generator (RAN2) used in all the scripts.
 
-plot.plt plots the raster plot for the spiking time of each neuron with each community distinguished by alternative coloring scheme. This shows the variability/uniformity of firing of the neurons.  
+plot.plt plots the raster plot for the spiking time of each neuron with each community distinguished by alternative coloring scheme. This shows the variability/uniformity of firing of the neurons. Change the name of the data file that is going to be plotted (same as the one used to write the spike data in the c++ program). 
