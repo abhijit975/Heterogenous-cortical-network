@@ -274,7 +274,7 @@ fclose(fp);
 fclose(fptr);
 printf("Plotting data..\n");
 
-system("gnuplot -p 'plotrastor.plt'");
+system("gnuplot -p 'plot.plt'");
 
 return(0);
 }
