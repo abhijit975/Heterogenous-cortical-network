@@ -36,7 +36,7 @@ static int long seed = time(NULL);  //seed for random number generator
 
 //Define clustering parameters.............................................................................................................
 
-#define ratiojee 2.0
+#define ratiojee 1.9
 #define ratiopee 4.0
 //.........................................................................................................................................
 
@@ -78,7 +78,7 @@ int main()
 //Opening Files to write spike timings, E & I synaptic input current, and read the powerlaw distributed population.........................
 
 FILE *fp,*fptr,*fptr1;
-fp = fopen("./spikeraster.dat","w");
+fp = fopen("./spike_eps.dat","w");
 fptr1 = fopen("./current_power.dat","w");  //writes E & I synaptic input currents for a neuron in population 1,2, ncl-2 and ni
 fptr = fopen("./popexp.dat","r"); 
 //.........................................................................................................................................
@@ -92,7 +92,7 @@ double k = pow(1.0*K,0.5);
 
 jee_out = 100.0*taui/(k*taue);
 //jee_out = 2.357023;
-jee_in = jee_out*4.2/ratiopee;
+jee_in = jee_out/1.8;
 //jee_in = jee_out*ratiojee ;  			//uncomment this line and comment the above line to get an unbalanced network with jeein greater than jeeout
 jie = 100.0*(pee/pie)*(1./(k));
 //jei = -0.045255;
@@ -108,7 +108,7 @@ double T = 5000;  				// Runtime for the simulation
 int Nsteps = (int)round(T/dt);
 
 int Nstim = 100 ;
-double stimstr = 0.0/taue ;
+double stimstr = 0.0/taue ;  // use 0.1/taue for stimulation strength
 double	stimstart = 500 ;
 double	stimend = 2500 ;            //uncomment this part to provide external simulation
 //.........................................................................................................................................
@@ -224,7 +224,7 @@ for(int p = 0; p < ncl; p++)
 //.........................................................................................................................................
 
 //Defining Weight matrix for eigenvalue calculation........................................................................................
-
+/*
 	W[p][p] = jee_in*pee*peein/peeout;
 	//W[p][p] = (jee_in*peein);   		//uncomment this line and comment above line if using weights[i][j] = jee_in/nec[p]
 	W[ncl][p] = jie*pie;
@@ -237,7 +237,7 @@ for(int p = 0; p < ncl; p++)
 			W[l][p] = jee_out*pee;
 			//W[l][p] = jee_out*peeout;		//uncomment this line and comment above line if using weights[i][j] = jee_out/nec[p]
 			}
-	}
+	}*/
 //.........................................................................................................................................
 
 //E-E outside cluster connection...........................................................................................................
