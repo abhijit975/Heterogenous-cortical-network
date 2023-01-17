@@ -2,10 +2,10 @@
 This is based on my project on firing statistics of heterogenous cluster sizes in cortical networks.
 Written in C++ (also works with C) and plotting is done with gnuplot.
 
-This project has 4 main C++/C codes:
+This project has 3 main C++/C codes:
 1. nocluster_network.cpp - Produces datafile for plotting a raster plot with no clusters.
-2. homogeneous.cpp - Reproduces the results of Litwin-Kumar and Doiron with homogeneous cluster sizes.
 2. partial_balance.cpp - Produces partially balanced network and its firing statistics. (read comments to provide external stimulation to certain neurons)
+                         This file can be modified to create the raster plots of Liwin-Kumar, Doiron paper. The input file should be 50 clusters with same size.
 3. hierarchy.cpp - Produces a partially balanced network with hierarchy.
 
 The community sizes for the exciters are defined in the popexp.dat file. The sizes are exponentially distributed with mean = 80 (on average 50 clusters).
