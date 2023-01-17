@@ -3,7 +3,8 @@ This is based on my project on firing statistics of heterogenous cluster sizes i
 Written in C++ (also works with C) and plotting is done with gnuplot.
 
 This project has 4 main C++/C codes:
-1. homegeneous.cpp - Produces datafile for plotting a raster plot with homogeneous cluster sizes.
+1. nocluster_network.cpp - Produces datafile for plotting a raster plot with no clusters.
+2. homogeneous.cpp - Reproduces the results of Litwin-Kumar and Doiron with homogeneous cluster sizes.
 2. partial_balance.cpp - Produces partially balanced network and its firing statistics. (read comments to provide external stimulation to certain neurons)
 3. hierarchy.cpp - Produces a partially balanced network with hierarchy.
 
